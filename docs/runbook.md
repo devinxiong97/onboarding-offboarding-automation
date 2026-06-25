@@ -34,10 +34,15 @@ Send Welcome Email: Yes
 2. A drafted welcome email personalized with name + start date.
 3. ⚠️ flag if start date is today/past.
 
-**Operator executes:**
-1. Create Google account (`gam create user …`).
-2. Invite to Slack (admin UI or SCIM where available).
-3. Send the welcome email.
+**Automated on creation (per company → its own GAM profile/domain/SKU):**
+1. Create Google account (`gam create user …`), force password change on first login.
+2. Assign the company's Workspace license (SKU per org).
+3. Set directory fields for tracking: **title**, **manager** (relation), and **start date** (custom `Employment.StartDate` schema).
+4. Add to the company's **all-staff group** (`all@<domain>`) — idempotent.
+5. Generate the **welcome-email draft** (work email + temp password → Slack → message manager).
+6. **Remote employees:** add a **1Password** setup step to the welcome email; the 1Password invite itself is sent manually (no 1Password API connected).
+
+**Operator finishes:** review/send the welcome draft, send the Slack invite, and (remote) send the 1Password invite.
 
 ---
 
