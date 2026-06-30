@@ -1,6 +1,6 @@
 # Scheduled Cloud-Agent Prompt
 
-The triage agent runs as an **hourly AI agent cloud routine** (cron `0 * * * *`) with only the Slack connector attached. It holds no admin credentials. IDs below are redacted placeholders.
+The triage agent runs as an **hourly scheduled cloud routine** (cron `0 * * * *`) with only the Slack connector attached. It holds no admin credentials. IDs below are redacted placeholders.
 
 ## Prompt (sanitized)
 

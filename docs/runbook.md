@@ -6,7 +6,7 @@
 
 - **HR** submits structured requests via Slack workflow forms.
 - **IT/ops** (the operator) reviews agent action-cards and executes privileged steps.
-- **AI agent agent** detects, parses, triages, and drafts — never executes destructive steps.
+- **Automation agent** detects, parses, triages, and drafts — never executes destructive steps.
 
 ---
 

@@ -1,6 +1,6 @@
-# Offboarding & Onboarding Automation with AI agent
+# Offboarding & Onboarding Automation
 
-A self-running employee **on/offboarding triage system** built with [AI agent](https://AI.com/AI-code), MCP connectors, and Google Workspace admin tooling — designed for a multi-org IT/ops environment where HR requests arrive as structured Slack forms.
+A self-running employee **on/offboarding triage system** built on a scheduled AI agent runtime with MCP connectors and Google Workspace admin tooling — designed for a multi-org IT/ops environment where HR requests arrive as structured Slack forms.
 
 > **Case study / portfolio repo.** All names, emails, domains, and IDs in this repository are **fabricated examples**. No real credentials, tokens, or employee data are included — see [`SECURITY.md`](SECURITY.md) for what was deliberately excluded and why.
 
@@ -21,7 +21,7 @@ A **human-in-the-loop** pipeline that automates the tedious 90% (detection, pars
 
 ```mermaid
 flowchart TD
-    A[HR posts structured form<br/>in Slack channel] --> B{Hourly AI agent<br/>cloud routine}
+    A[HR posts structured form<br/>in Slack channel] --> B{Hourly scheduled<br/>cloud routine}
     B -->|reads 6 channels| C[Parse + dedupe<br/>against prior DMs]
     C -->|new request| D[DM action-card to IT/ops<br/>checklist · missing-info flags · ⚠️ approval gates]
     C -->|nothing new| Z[No-op]
@@ -63,6 +63,6 @@ flowchart TD
 
 ## Tech / skills demonstrated
 
-`AI agent` · `MCP connectors (Slack, Google Workspace, Gmail, Calendar)` · `scheduled cloud agents (cron routines)` · `Google Workspace administration (GAM7)` · `service accounts & domain-wide delegation` · `human-in-the-loop agent design` · `secure secret handling` · `multi-tenant ops`
+`AI agent runtime` · `MCP connectors (Slack, Google Workspace, Gmail, Calendar)` · `scheduled cloud agents (cron routines)` · `Google Workspace administration (GAM7)` · `service accounts & domain-wide delegation` · `human-in-the-loop agent design` · `secure secret handling` · `multi-tenant ops`
 
 ---
